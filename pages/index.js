@@ -1,43 +1,6 @@
 import React from 'react';
 import SandBox from '../components/sandbox';
 
-class Clock extends React.Component {
-    constructor() {
-        super()
-        this.timer = null;
-        this.state = {
-            time: new Date()
-        }
-    }
-    componentDidMount() {
-        this.timer = setInterval(() => {
-            this.setState({
-                time: new Date()
-            })
-        }, 1000)
-    }
-    componentWillUnmount() {
-        clearInterval(this.timer)
-    }
-    render() {
-        return (
-            <>
-            <span>
-            { this.state.time.toLocaleTimeString() }
-            </span>
-            <style jsx>
-                {`
-                span {
-                    font-size: 0.9em;
-                    color: #ccc;
-                }
-                `}
-            </style>
-            </>
-        )
-    }
-}
-
 const Header = () => {
     const siteTitle = process.env.siteTitle;
     return (
@@ -83,12 +46,6 @@ const Footer = () => {
 }
 
 class Index extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    componentDidMount() {
-        //
-    }
     render() {
         return (
             <>

@@ -2,6 +2,11 @@ import React from 'react';
 import Chart from "react-google-charts";
 
 export default function SandBox() {
+    
+    const dailyPUIUrl = "/spreadsheets/d/18MCJgAMD_waEZ6w6WaAC-emEkckf6wJGhnOk6bad6H8/edit?usp=sharing"
+    const covid19CaseUrl = "/spreadsheets/d/13hJGwQBYltl7Eu6GwYJGNCrK1qyN7iF15IB89BW9NlE/edit?usp=sharing"
+    const regionDataUrl = "/spreadsheets/d/1GjPH2Qk4rI-myvoqUJdHMi9WE_3qwRAzyL8eY63gpcM/edit?usp=sharing"
+    
     return (
         <>
         <div>
@@ -11,7 +16,7 @@ export default function SandBox() {
                     width={'100%'}
                     height={300}
                     chartType="ColumnChart"
-                    spreadSheetUrl=""
+                    spreadSheetUrl={`https://docs.google.com${dailyPUIUrl}`}
                     loader={<div>Loading Chart</div>}
                     options={{
                         title: 'COVID-19 Persons Under Investigation (PUI) Daily Total',
@@ -38,7 +43,7 @@ export default function SandBox() {
                     height={300}
                     chartType="LineChart"
                     loader={<div>Loading Chart</div>}
-                    spreadSheetUrl=""
+                    spreadSheetUrl={`https://docs.google.com${covid19CaseUrl}`}
                     options={{
                         title: 'COVID-19 Case Tracker',
                         colors: ['#2D2', '#0AF', '#F00'],
@@ -63,7 +68,7 @@ export default function SandBox() {
                         <Chart
                         chartType="Table"
                         loader={<div>Loading Chart</div>}
-                        spreadSheetUrl=""
+                        spreadSheetUrl={`https://docs.google.com${regionDataUrl}`}
                         options={{
                             showRowNumber: false,
                         }}

@@ -9,7 +9,7 @@ I will be using [react-google-charts](https://react-google-charts.com/) module t
 
 ## Description
 
-The data is just dummy.<br><br>
+**The data is just dummy.**<br><br>
 The data view is based on COVID-19 outbreak trackers.<br>
 Currently, there are three charts:<br>
 
@@ -19,6 +19,7 @@ Currently, there are three charts:<br>
 
 * Table chart that list the PUI data for different regions.
 
+![Screenshot](docs/screenshot.png)
 
 ## Available Scripts
 
